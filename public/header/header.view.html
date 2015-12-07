@@ -9,15 +9,8 @@
             </button>
             <a class="navbar-brand" href="/home.html"><img style="margin-right:20px;marginleft:0px;float:left;margin-bottom:10px;height:40px;" src="/images/UCB-Logo-Acronym.png"></a>
         </div>
-        <div id="navbar" class="navbar-collapse  collapse">
-            <ul class="nav navbar-nav">
-                <li><a class="ucbheader" href="#/event" ng-class="{'active': $location.url() == '/event'}">Events</a></li>
-                <li><a class="ucbheader" href="#/checkIn" ng-class="{'active': $location.url() == '/checkIn'}">CheckIn</a></li>
-				
-				<li><a class="ucbheader" href="#/home" ng-class="{'active': $location.url() == '/points'}">Points</a></li>
-                <li><a class="ucbheader" href="#/home" ng-class="{'active': $location.url() == '/contact'}">Contact</a></li>
-			</ul>
-			<ul class="nav navbar-nav  translation-links">
+		
+		<ul class="translation-links">
 	          
 				<li><a href="#" class="spanish" data-lang="Spanish"><img class="langimg" src="/images/flags/S.gif"></a></li>
 				<li><a href="#" class="english" data-lang="English"><img class="langimg" src="/images/flags/U.gif"></a></li>
@@ -45,6 +38,16 @@
 					});
 				</script>
             </ul>
+		
+        <div id="navbar" class="navbar-collapse  collapse">
+            <ul class="nav navbar-nav">
+                <li><a class="ucbheader" href="#/event" ng-class="{'active': $location.url() == '/event'}">Events</a></li>
+                <li><a class="ucbheader" href="#/checkIn" ng-class="{'active': $location.url() == '/checkIn'}">CheckIn</a></li>
+				
+				<li><a class="ucbheader" href="#/home" ng-class="{'active': $location.url() == '/points'}">Points</a></li>
+                <li><a class="ucbheader" href="#/home" ng-class="{'active': $location.url() == '/contact'}">Contact</a></li>
+			</ul>
+			
 			<ul class="nav navbar-nav navbar-right">
                 <li><a href="#/register" ng-class="{'active': $location.url() == '/register', 'hidden': currentUser}">Register</a></li>
                 <li><a href="#/login" ng-class="{'active': $location.url() == '/login', 'hidden': currentUser}">Login</a></li>

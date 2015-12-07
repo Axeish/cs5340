@@ -142,7 +142,24 @@ margin-top: 30px;
  display:none;
  }
  
- #translation-links{
- margin-left: 30px;
+ .translation-links{
+float :right;
+
  
  }
+ 
+ .translation-links li {
+  padding-right: 20px;
+  display: inline-block;
+}
+
+ .translation-links a {
+  font: 26px Helvetica;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  -webkit-border-box: 0 1px 0 0 black;
+  border-bottom: 3px solid transparent;
+  -webkit-transition: border-bottom .2s linear;
+}
+
