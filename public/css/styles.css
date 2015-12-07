@@ -4,9 +4,12 @@
 
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
-  padding-top: 50px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333333;
+    background-color: #ffffff;
 }
-
 
 /*
  * Global add-ons
@@ -25,6 +28,16 @@ body {
   border: 0;
 }
 
+
+
+.navbar {
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #255f8a;
+}
 /*
  * Sidebar
  */
@@ -102,4 +115,35 @@ body {
 .placeholder img {
   display: inline-block;
   border-radius: 50%;
+}
+
+#checkin {
+width: 100%;
+opacity:1;
+
+}
+#checkin:hover {
+}
+#checkimg {
+margin-top: 30px;
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-content {
+    background: rgba(0,0,0,0.5);
+    color: white;
+    cursor: pointer;
+    display: table;
+    height: 150px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 150px;
+    opacity: 0;
+    -webkit-transition: opacity 500ms;
+    -moz-transition: opacity 500ms;
+    -o-transition: opacity 500ms;
+    transition: opacity 500ms;
 }
