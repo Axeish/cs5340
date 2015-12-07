@@ -116,7 +116,9 @@ body {
   display: inline-block;
   border-radius: 50%;
 }
-
+.ucbheader{
+margin-top:10px;
+font-size:large;}
 #checkin {
 width: 100%;
 opacity:1;
@@ -130,20 +132,12 @@ margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
 }
-
-.text-content {
-    background: rgba(0,0,0,0.5);
-    color: white;
-    cursor: pointer;
-    display: table;
-    height: 150px;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 150px;
-    opacity: 0;
-    -webkit-transition: opacity 500ms;
-    -moz-transition: opacity 500ms;
-    -o-transition: opacity 500ms;
-    transition: opacity 500ms;
-}
+ .langimg {
+ width:30px;
+ margin-top: 15px;
+ margn-right: 20px;
+ 
+ }
+ #google_translate_element{
+ display:none;
+ }
