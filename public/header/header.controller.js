@@ -6,6 +6,12 @@
     function HeaderController($scope, $rootScope, $location){
         $scope.$location = $location;
         $scope.logout = logout;
+        
+        $(function(){
+            $('#help').click(function(){
+            $('#guide').popup('show');
+            });
+        });
 
         if($rootScope.currentUser){
             $scope.userName = $rootScope.currentUser.userName;
