@@ -5,6 +5,9 @@
 
     function Configure($routeProvider){
             $routeProvider
+                .when("/detail", {
+                    templateUrl: "./text/NewFile.html"
+                })
                 .when("/events", {
                     templateUrl: "./events/events.view.html"
                 })
