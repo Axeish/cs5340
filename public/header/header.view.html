@@ -7,7 +7,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/home.html"><img style="margin-right:20px;marginleft:0px;float:left;margin-bottom:10px;height:40px;" src="/images/UCB-Logo-Acronym.png"></a>
+            <a class="navbar-brand" href="#/home"><img style="margin-right:20px;marginleft:0px;float:left;margin-bottom:10px;height:40px;" src="/images/UCB-Logo-Acronym.png"></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -20,9 +20,17 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#/register" ng-class="{'active': $location.url() == '/register', 'hidden': currentUser}">Register</a></li>
                 <li><a href="#/login" ng-class="{'active': $location.url() == '/login', 'hidden': currentUser}">Login</a></li>
-                <li><a href="#/home" ng-class="{'hidden': ! currentUser}">{{currentUser.userName}}</a></li>
-                <li><a href="#/profile" ng-class="{'active': $location.url() == '/profile', 'hidden': ! currentUser}">Profile</a></li>
-                <li><a href="#/login" ng-click="logout()" ng-class="{'hidden': ! currentUser}">Logout</a></li>
+                <li class="dropdown open" ng-class="{'hidden': ! currentUser}">
+                    <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                        {{currentUser.userName}}
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu col-sm-3">
+                        <button class="btn btn-default btn-block"><a href="#/profile">Edit Profile</a></button>
+                        <button class="btn btn-default btn-block"><a href="#/activityLog">Activity Log</a></button>
+                        <button class="btn btn-danger btn-block"><a href="#/login" ng-click="logout()">Sign Out</a></button>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>

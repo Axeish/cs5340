@@ -5,6 +5,9 @@
 
     function Configure($routeProvider){
             $routeProvider
+                .when("/activityLog", {
+                    templateUrl: "./activity/activity.view.html"
+                })
                 .when("/home", {
                     templateUrl: "./home/home.view.html"
                 })

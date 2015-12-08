@@ -4,13 +4,48 @@
         .factory("UserService", UserService);
 
     function UserService(){
-        var users = [{
-            id: "1234567890",
-            userName: "timjobs",
-            password: "12345",
-            firstName: "Tian",
-            lastName: "Xia",
-            email: "xt@gmail.com"}];
+        var users = [
+                      {
+                        id: "1234567890",
+                        userName: "timjobs",
+                        password: "12345",
+                        firstName: "Tian",
+                        lastName: "Xia",
+                        email: "xt@gmail.com",
+                        attendedEvents: ["010", "007"],
+                        goingEvents: ["014", "017", "018"]
+                      },
+                      {
+                        id: "112233",
+                        userName: "dd",
+                        password: "12345",
+                        firstName: "Danjin",
+                        lastName: "Sun",
+                        email: "dd@gmail.com",
+                        attendedEvents: ["010", "007"],
+                        goingEvents: ["014", "017"]
+                      },
+                      {
+                        id: "445566",
+                        userName: "gy",
+                        password: "12345",
+                        firstName: "Yuan",
+                        lastName: "Gao",
+                        email: "gy@gmail.com",
+                        attendedEvents: ["010", "007"],
+                        goingEvents: ["014", "017"]
+                      },
+                      {
+                        id: "778899",
+                        userName: "ah",
+                        password: "12345",
+                        firstName: "Ashish",
+                        lastName: "Kumar",
+                        email: "ah@gmail.com",
+                        attendedEvents: ["010", "007"],
+                        goingEvents: ["014", "017"]
+                      }
+                    ]
 
         var service = {
             findUserByUsernameAndPassword: findUserByUsernameAndPassword,
