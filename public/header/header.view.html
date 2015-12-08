@@ -41,16 +41,16 @@
 		
         <div id="navbar" class="navbar-collapse  collapse">
             <ul class="nav navbar-nav">
-                <li><a class="ucbheader" href="#/event" ng-class="{'active': $location.url() == '/event'}">Events</a></li>
-                <li><a class="ucbheader" href="#/checkIn" ng-class="{'active': $location.url() == '/checkIn'}">CheckIn</a></li>
-				
-				<li><a class="ucbheader" href="#/home" ng-class="{'active': $location.url() == '/points'}">Points</a></li>
-                <li><a class="ucbheader" href="#/home" ng-class="{'active': $location.url() == '/contact'}">Contact</a></li>
+                <li><a class="ucbheader" href="#/events" ng-class="{'active': $location.url() == '/events'}" data-toggle="popover" data-placement="bottom" data-content="Click here to reveal all events!" data-trigger="focus" >Events</a></li>
+                <li><a class="ucbheader" href="#/checkIn" ng-class="{'active': $location.url() == '/checkIn'}" data-toggle="popover" data-placement="bottom" data-content="Click here to check in events." data-trigger="focus" >CheckIn</a></li>
+				<li><a class="ucbheader" href="#/home" ng-class="{'active': $location.url() == '/points'}" data-toggle="popover" data-placement="bottom" data-content="Click here to track your points." data-trigger="focus" >Points</a></li>
+                <li><a class="ucbheader" href="#/home" ng-class="{'active': $location.url() == '/contact'}" data-toggle="popover" data-placement="bottom" data-content="Click here to contact us." data-trigger="focus">Contact</a></li>
 			</ul>
 			
-			<ul class="nav navbar-nav navbar-right">
+			      <ul class="nav navbar-nav navbar-right">
                 <li><a href="#/register" ng-class="{'active': $location.url() == '/register', 'hidden': currentUser}">Register</a></li>
                 <li><a href="#/login" ng-class="{'active': $location.url() == '/login', 'hidden': currentUser}">Login</a></li>
+                <li><a id="help" data-toggle="modal" data-target="#faq">FAQ</a></li>
                 <li class="dropdown open" ng-class="{'hidden': ! currentUser}">
                     <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
                         {{currentUser.userName}}
@@ -66,3 +66,56 @@
         </div>
     </div>
 </nav>
+
+<!-- Chat -->
+<div id="talkBox" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-body">
+    <p>Chat</p>
+    <div class="modal-body" id="talkCom">
+    </div>
+    <textarea name="reviewText" rows="5" placeholder="Content" style="width:400px" id="selfTalk"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true" id="closeReview">Close</button>
+    <button class="btn" id="talkPost">Send</button>
+  </div>
+</div>
+
+<div class="modal fade" id="faq" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Frequently Asked Questions</h4>
+      </div>
+      <div class="modal-body">
+          <ul class="list-group">
+              <li class="list-group-item list-group-item-success">
+                    <h4 class="list-group-item-heading">How to Check In</h4>
+                    <p class="list-group-item-text">You can click on any event in the "Events" page and click "Check in".</p>
+              </li>
+              <li class="list-group-item list-group-item-warning">
+                    <h4 class="list-group-item-heading">How to Keep Track of My Points</h4>
+                    <p class="list-group-item-text">Your current point is show in the homepage, and will update with every event you've participated in.</p>
+              </li>
+              <li class="list-group-item list-group-item-info">
+                    <h4 class="list-group-item-heading">How to Keep Track of My Activity Log</h4>
+                    <p class="list-group-item-text">You can access your personal activity log by selecting "Activity Log" from the dropdown under your username, located in the top right corner.</p>
+              </li>          
+              <li class="list-group-item list-group-item-danger">
+                    <h4 class="list-group-item-heading">How to Find Events that I Have Preference For?</h4>
+                    <p class="list-group-item-text">In the events list page, there's a blue filter button besides the search bar. Click on it and make your preference in the pop-up window, then click "Search" to select your prefered events:)</p>
+              </li>
+          </ul>
+      </div>
+      <div class="modal-footer">
+        <dr style="color:#438bca;">Still have questions?</dr>
+        <button type="button" class="btn btn-primary">Contact</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  //show hints when hover
+  $(".ucbheader").popover({ trigger: "hover" });
+</script>

@@ -20,8 +20,8 @@
                 .when("/profile", {
                     templateUrl: "./profile/profile.view.html"
                 })
-                .when("/form", {
-                    templateUrl: "./form/form.view.html"
+                .when("/events", {
+                    templateUrl: "./events/events.view.html"
                 })
                 .otherwise({
                     redirectTo: "/home"
