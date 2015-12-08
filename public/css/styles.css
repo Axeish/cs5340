@@ -116,7 +116,9 @@ body {
   display: inline-block;
   border-radius: 50%;
 }
-
+.ucbheader{
+margin-top:10px;
+font-size:large;}
 #checkin {
 width: 100%;
 opacity:1;
@@ -130,20 +132,34 @@ margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
 }
+ .langimg {
+ width:30px;
+ margin-top: 15px;
+ margn-right: 20px;
+ 
+ }
+ #google_translate_element{
+ display:none;
+ }
+ 
+ .translation-links{
+float :right;
 
-.text-content {
-    background: rgba(0,0,0,0.5);
-    color: white;
-    cursor: pointer;
-    display: table;
-    height: 150px;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 150px;
-    opacity: 0;
-    -webkit-transition: opacity 500ms;
-    -moz-transition: opacity 500ms;
-    -o-transition: opacity 500ms;
-    transition: opacity 500ms;
+ 
+ }
+ 
+ .translation-links li {
+  padding-right: 20px;
+  display: inline-block;
 }
+
+ .translation-links a {
+  font: 26px Helvetica;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  -webkit-border-box: 0 1px 0 0 black;
+  border-bottom: 3px solid transparent;
+  -webkit-transition: border-bottom .2s linear;
+}
+

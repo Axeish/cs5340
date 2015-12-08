@@ -9,7 +9,37 @@
             </button>
             <a class="navbar-brand" href="#/home"><img style="margin-right:20px;marginleft:0px;float:left;margin-bottom:10px;height:40px;" src="/images/UCB-Logo-Acronym.png"></a>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
+		
+		<ul class="translation-links">
+	          
+				<li><a href="#" class="spanish" data-lang="Spanish"><img class="langimg" src="/images/flags/S.gif"></a></li>
+				<li><a href="#" class="english" data-lang="English"><img class="langimg" src="/images/flags/U.gif"></a></li>
+			 
+<!-- Code provided by Google -->
+			<div id="google_translate_element"></div>
+				<script type="text/javascript">
+					function googleTranslateElementInit() {
+					new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,es,zh-TW',layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
+					}
+				</script>
+				<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
+
+<!-- Flag click handler -->
+				<script type="text/javascript">
+					$('.translation-links a').click(function() {
+					var lang = $(this).data('lang');
+					var $frame = $('.goog-te-menu-frame:first');
+						if (!$frame.size()) {
+						  alert("Error: Could not find Google translate frame.");
+						  return false;
+						}
+					$frame.contents().find('.goog-te-menu2-item span.text:contains('+lang+')').get(0).click();
+						return false;
+					});
+				</script>
+            </ul>
+		
+        <div id="navbar" class="navbar-collapse  collapse">
             <ul class="nav navbar-nav">
                 <li><a class="ucbheader" href="#/event" ng-class="{'active': $location.url() == '/event'}">Events</a></li>
                 <li><a class="ucbheader" href="#/checkIn" ng-class="{'active': $location.url() == '/checkIn'}">CheckIn</a></li>
@@ -17,7 +47,8 @@
 				<li><a class="ucbheader" href="#/home" ng-class="{'active': $location.url() == '/points'}">Points</a></li>
                 <li><a class="ucbheader" href="#/home" ng-class="{'active': $location.url() == '/contact'}">Contact</a></li>
 			</ul>
-            <ul class="nav navbar-nav navbar-right">
+			
+			<ul class="nav navbar-nav navbar-right">
                 <li><a href="#/register" ng-class="{'active': $location.url() == '/register', 'hidden': currentUser}">Register</a></li>
                 <li><a href="#/login" ng-class="{'active': $location.url() == '/login', 'hidden': currentUser}">Login</a></li>
                 <li class="dropdown open" ng-class="{'hidden': ! currentUser}">
