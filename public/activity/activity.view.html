@@ -1,3 +1,5 @@
+<script src="../js/bootstrap-rating-input.min.js"></script>
+
 <div class="col-sm-9 col-sm-offset-2 col-md-10 col-md-offset-1 main" ng-controller="ActivityLogController">
     <h1 class="page-header">Events</h1>
 
@@ -12,13 +14,30 @@
             </tr>
             </thead>
             <tbody>
-            <tr ng-repeat="event in attendedEvents">
-                <td class="col-sm-1">{{event.beginTime}}</td>
-                <td class="col-sm-6 dropdown">
-
-                    {{event.title}}</td>
-                <td class="col-sm-2">{{event.date}}</td>
-            </tr>
+                <tr ng-repeat="event in attendedEvents">
+                    <td class="col-sm-1">{{event.beginTime}}</td>
+                    <td class="col-sm-6">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown">{{event.title}}</a>
+                            <div class="dropdown-menu">
+                                <hr>
+                                <li>Tian: this event is boring.</li>
+                                <hr>
+                                <li>Danjin: I got useful knowledge in this event.</li>
+                                <hr>
+                                <li>Yuan: the free food is nice.</li>
+                                <hr>
+                                <li>Ashish: the weather is nice today.</li>
+                                <hr>
+                                <li>Description</li>
+                                <p>{{event.description}}</p>
+                                <hr>
+                                <input type="number" name="your_awesome_parameter" id="some_id" class="rating" />
+                            </div>
+                        </li>
+                    </td>
+                    <td class="col-sm-2">{{event.date}}</td>
+                </tr>
             </tbody>
         </table>
     </div>
