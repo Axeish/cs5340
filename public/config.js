@@ -5,8 +5,8 @@
 
     function Configure($routeProvider){
             $routeProvider
-                .when("/event", {
-                    templateUrl: "./event/event.view.html"
+                .when("/events", {
+                    templateUrl: "./events/events.view.html"
                 })
                 .when("/activityLog", {
                     templateUrl: "./activity/activity.view.html"
