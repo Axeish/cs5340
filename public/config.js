@@ -5,6 +5,9 @@
 
     function Configure($routeProvider){
             $routeProvider
+                .when("/event", {
+                    templateUrl: "./event/event.view.html"
+                })
                 .when("/activityLog", {
                     templateUrl: "./activity/activity.view.html"
                 })
@@ -26,6 +29,5 @@
                 .otherwise({
                     redirectTo: "/home"
                 });
-
     }
 })();

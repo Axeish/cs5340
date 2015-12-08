@@ -1,45 +1,25 @@
 (function(){
     angular
         .module("FormBuilderApp")
-        .controller("ActivityLogController", ActivityLogController);
+        .controller("EventController", EventController);
 
-    function ActivityLogController($scope, $rootScope, $location, EventService){
+    function EventController($scope, $rootScope, $location, EventService){
         $scope.$location = $location;
         $scope.addEvent = addEvent;
         $scope.updateEvent = updateEvent;
         $scope.selectEvent = selectEvent;
         $scope.deleteEvent = deleteEvent;
 
-        var currentUserId = $rootScope.currentUser.id;
-        var curUser = $rootScope.currentUser;
 
-        function findAttendedEventsForUser(){
-            $scope.attendedEvents = [];
-            for (var index in curUser.attendedEvents){
-                EventService.findEventById(
-                    curUser.attendedEvents[index],
-                    function(event){
-                        $scope.attendedEvents.push(event)
-                    }
-                );
-            }
+        function findAllEvents(){
+            EventService.findAllEvents(
+                function(events){
+                    $scope.events = events;
+                }
+            )
         }
 
-        function findGoingEventsForUser(){
-            $scope.goingEvents = [];
-
-            for (var index in curUser.goingEvents){
-                EventService.findEventById(
-                    curUser.goingEvents[index],
-                    function(event){
-                        $scope.goingEvents.push(event)
-                    }
-                );
-            }
-        }
-
-        findAttendedEventsForUser();
-        findGoingEventsForUser()
+        findAllEvents();
 
         function addEvent(){
             if ($scope.eventName != "" && $scope.eventName != null){
