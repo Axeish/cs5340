@@ -213,3 +213,7 @@ float :right;
   -webkit-transition: border-bottom .2s linear;
 }
 
+ .col-xs-12 {
+ margin-top: 30px;
+}
+
