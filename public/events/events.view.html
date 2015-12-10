@@ -14,55 +14,54 @@
         </div>
     </div>
 
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Preference Filter</h4>
-      </div>
-      <div class="modal-body">
-       <div>
-          <dt>Choose event time period:</dt>
-          <div class="btn-group">
-            <button type="button" class="btn btn-default">Morning</button>
-            <button type="button" class="btn btn-default">Noon</button>
-            <button type="button" class="btn btn-default">Afternoon</button>
-            <button type="button" class="btn btn-default">Evening</button>
-          </div> 
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Preference Filter</h4>
+          </div>
+          <div class="modal-body">
+           <div>
+              <dt>Choose event time period:</dt>
+              <div class="btn-group">
+                <button type="button" class="btn btn-default">Morning</button>
+                <button type="button" class="btn btn-default">Noon</button>
+                <button type="button" class="btn btn-default">Afternoon</button>
+                <button type="button" class="btn btn-default">Evening</button>
+              </div>
+            </div>
+            <br/>
+            <div class="dropdown">
+              <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">Choose event category
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <li><a>Education(Child/Adult)</a></li>
+                <li><a>Health(Physical/Mental)</a></li>
+                <li><a>Finances/Employment</a></li>
+                <li><a>Community&Service</a></li>
+              </ul>
+            </div>
+            <br/>
+            <div class="dropdown">
+              <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown">Sort events by
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <li><a href="#">Distance</a></li>
+                <li><a href="#">Possible Points</a></li>
+                <li><a href="#">Popularity</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Search</button>
+          </div>
         </div>
-        <br/>
-        <div class="dropdown">
-          <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">Choose event category
-          <span class="caret"></span></button>
-          <ul class="dropdown-menu">
-            <li><a>Education(Child/Adult)</a></li>
-            <li><a>Health(Physical/Mental)</a></li>
-            <li><a>Finances/Employment</a></li>
-            <li><a>Community&Service</a></li>
-          </ul>
-        </div>
-        <br/>
-        <div class="dropdown">
-          <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown">Sort events by
-          <span class="caret"></span></button>
-          <ul class="dropdown-menu">
-            <li><a href="#">Distance</a></li>
-            <li><a href="#">Possible Points</a></li>
-            <li><a href="#">Popularity</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Search</button>
       </div>
     </div>
-  </div>
-</div>
-
-<br/>
+    <br/>
   <table class="table table-striped" ng-controller="EventsController">
     <thead>
       <tr>
@@ -88,3 +87,4 @@
       </p>
     </tbody>
   </table>
+</div>
