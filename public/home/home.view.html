@@ -1,11 +1,51 @@
+<div class="container">
+    <div class="col-sm-9 col-sm-offset-2 col-md-10 col-md-offset-1 main" ng-controller="HomeController">
+        <div class="row text-center">
+            <div class="page-panel panel-link points-panel" >
+                <a href="{{pointsURL}}">
+                    <div class="text-center">{{points}} Points</div>
+                </a>
+            </div>
+        </div>
 
-<link rel="stylesheet" type="text/css" href="../css/eventdetail.css">
+        <div class="row text-center">
+            <div class="page-panel panel-link points-panel" >
+                <a href="#/events">
+                    <img src="../images/UCBbutton.png">
+                    <p>Check In</p>
+                </a>
+                <p></p>
+            </div>
+        </div>
 
-    
-<div class="col-sm-9 col-sm-offset-2 col-md-10 col-md-offset-1 main">
+        <div class="row text-center">
+            <div class="page-panel panel-link points-panel" >
+                <div class="row text-center" style="font-size: 14px">
+                    Subscribe to get SMS notification
+                </div>
 
-    <div id="checkin">
-    	<img id="checkimg" src="\images\image.png"><br>
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    SMS Subscription
+                </button>
+                <div class="collapse" id="collapseExample">
+                    <div class="well login-block">
+                        <h1>Contact</h1>
+
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="glyphicon glyphicon-user"></i></div>
+                            <input class="form-control" type="text" placeholder="Username"/>
+                        </div>
+
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></div>
+                            <input class="form-control" type="text" placeholder="Tel Number"/>
+                        </div>
+                        <button id="btn-sub">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
-    <button class="col-md-offset-5 btn btn-primary center-block" onclick="window.location.href='../text/contact.view.html'">SMS Subscription</button>
 </div>
+

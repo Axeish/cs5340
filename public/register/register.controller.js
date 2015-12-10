@@ -11,6 +11,7 @@
             if($scope.password === $scope.verifiedPassword){
                 $scope.newUser = {
                     id: "",
+                    points: "0",
                     userName: $scope.userName,
                     password: $scope.password,
                     email: $scope.email,

@@ -10,6 +10,7 @@
                         userName: "timjobs",
                         password: "12345",
                         firstName: "Tian",
+                        points: "1000",
                         lastName: "Xia",
                         email: "xt@gmail.com",
                         attendedEvents: ["010", "007"],
@@ -20,6 +21,7 @@
                         userName: "dd",
                         password: "12345",
                         firstName: "Danjin",
+                        points: "1500",
                         lastName: "Sun",
                         email: "dd@gmail.com",
                         attendedEvents: ["010", "007"],
@@ -31,6 +33,7 @@
                         password: "12345",
                         firstName: "Yuan",
                         lastName: "Gao",
+                        points: "800",
                         email: "gy@gmail.com",
                         attendedEvents: ["010", "007"],
                         goingEvents: ["014", "017"]
@@ -41,6 +44,7 @@
                         password: "12345",
                         firstName: "Ashish",
                         lastName: "Kumar",
+                        points: "1300",
                         email: "ah@gmail.com",
                         attendedEvents: ["010", "007"],
                         goingEvents: ["014", "017"]

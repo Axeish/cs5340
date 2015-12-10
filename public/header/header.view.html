@@ -1,31 +1,30 @@
-<nav class="navbar navbar-inverse navbar-fixed-top" ng-controller="HeaderController">
-    <div class="container-fluid " style="background-color:#bddc6f">
-        <div class="navbar-header" style="margin-bottom:20px; color:blue">
+<div class="navbar navbar-inverse navbar-default" ng-controller="HeaderController">
+    <div class="container-fluid" style="background-color:#bddc6f">
+        <div class="navbar-header">
+            <!--style="margin-bottom:20px; color:blue-->
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#/home"><img style="margin-right:20px;marginleft:0px;float:left;margin-bottom:10px;height:40px;" src="/images/UCB-Logo-Acronym.png"></a>
-        </div>
-		
-		<ul class="translation-links">
-	          
-				<li><a href="#" class="spanish" data-lang="Spanish"><img class="langimg" src="/images/flags/S.gif"></a></li>
-				<li><a href="#" class="english" data-lang="English"><img class="langimg" src="/images/flags/U.gif"></a></li>
-			 
-<!-- Code provided by Google -->
-			<div id="google_translate_element"></div>
-				<script type="text/javascript">
+            <a class="navbar-brand" href="#/home"><img style="margin-right:20px;marginleft:0px;float:left;height:20px;" src="/images/UCB-Logo-Acronym.png"></a>
+            <ul class="translation-links">
+
+                <li><a href="#" class="spanish" data-lang="Spanish"><img class="langimg" src="/images/flags/S.gif"></a></li>
+                <li><a href="#" class="english" data-lang="English"><img class="langimg" src="/images/flags/U.gif"></a></li>
+
+                <!-- Code provided by Google -->
+                <div id="google_translate_element">
+                    <script type="text/javascript">
 					function googleTranslateElementInit() {
 					new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,es,zh-TW',layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
 					}
 				</script>
-				<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
+                    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
 
-<!-- Flag click handler -->
-				<script type="text/javascript">
+                    <!-- Flag click handler -->
+                    <script type="text/javascript">
 					$('.translation-links a').click(function() {
 					var lang = $(this).data('lang');
 					var $frame = $('.goog-te-menu-frame:first');
@@ -37,20 +36,21 @@
 						return false;
 					});
 				</script>
+                </div>
             </ul>
-		
-        <div id="navbar" class="navbar-collapse  collapse">
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar">
             <ul class="nav navbar-nav">
-                <li><a class="ucbheader" href="#/events" ng-class="{'active': $location.url() == '/events'}" data-toggle="popover" data-placement="bottom" data-content="Click here to reveal all events!" data-trigger="focus" >Events</a></li>
-                <li><a class="ucbheader" href="#/checkIn" ng-class="{'active': $location.url() == '/checkIn'}" data-toggle="popover" data-placement="bottom" data-content="Click here to check in events." data-trigger="focus" >CheckIn</a></li>
-				<li><a class="ucbheader" href="#/home" ng-class="{'active': $location.url() == '/points'}" data-toggle="popover" data-placement="bottom" data-content="Click here to track your points." data-trigger="focus" >Points</a></li>
-                <li><a class="ucbheader" href="#/home" ng-class="{'active': $location.url() == '/contact'}" data-toggle="popover" data-placement="bottom" data-content="Click here to contact us." data-trigger="focus">Contact</a></li>
+                <li><a class="tabpopover" href="#/events" ng-class="{'active': $location.url() == '/events'}" data-toggle="popover" data-placement="bottom" data-content="Click here to reveal all events!" data-trigger="focus" >Events</a></li>
+                <li><a class="tabpopover" href="#/checkIn" ng-class="{'active': $location.url() == '/checkIn'}" data-toggle="popover" data-placement="bottom" data-content="Click here to check in events." data-trigger="focus" >CheckIn</a></li>
+				<li><a class="tabpopover" href="#/home" ng-class="{'active': $location.url() == '/points'}" data-toggle="popover" data-placement="bottom" data-content="Click here to track your points." data-trigger="focus" >Points</a></li>
 			</ul>
-			
-			      <ul class="nav navbar-nav navbar-right">
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a id="help" data-toggle="modal" data-target="#faq">FAQ</a></li>
                 <li><a href="#/register" ng-class="{'active': $location.url() == '/register', 'hidden': currentUser}">Register</a></li>
                 <li><a href="#/login" ng-class="{'active': $location.url() == '/login', 'hidden': currentUser}">Login</a></li>
-                <li><a id="help" data-toggle="modal" data-target="#faq">FAQ</a></li>
                 <li class="dropdown open" ng-class="{'hidden': ! currentUser}">
                     <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
                         {{currentUser.userName}}
@@ -65,7 +65,9 @@
             </ul>
         </div>
     </div>
-</nav>
+
+
+</div>
 
 <!-- Chat -->
 <div id="talkBox" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -101,7 +103,7 @@
               <li class="list-group-item list-group-item-info">
                     <h4 class="list-group-item-heading">How to Keep Track of My Activity Log</h4>
                     <p class="list-group-item-text">You can access your personal activity log by selecting "Activity Log" from the dropdown under your username, located in the top right corner.</p>
-              </li>          
+              </li>
               <li class="list-group-item list-group-item-danger">
                     <h4 class="list-group-item-heading">How to Find Events that I Have Preference For?</h4>
                     <p class="list-group-item-text">In the events list page, there's a blue filter button besides the search bar. Click on it and make your preference in the pop-up window, then click "Search" to select your prefered events:)</p>
@@ -117,5 +119,95 @@
 </div>
 <script type="text/javascript">
   //show hints when hover
-  $(".ucbheader").popover({ trigger: "hover" });
+  $(".tabpopover").popover({ trigger: "hover" });
 </script>
+
+
+<!--<nav class="navbar navbar-default">-->
+    <!--<div class="container-fluid">-->
+        <!--&lt;!&ndash; Brand and toggle get grouped for better mobile display &ndash;&gt;-->
+        <!--<div class="navbar-header">-->
+            <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">-->
+                <!--<span class="sr-only">Toggle navigation</span>-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+            <!--</button>-->
+            <!--<a class="navbar-brand" href="#">Brand</a>-->
+        <!--</div>-->
+
+        <!--&lt;!&ndash; Collect the nav links, forms, and other content for toggling &ndash;&gt;-->
+        <!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">-->
+            <!--<ul class="nav navbar-nav">-->
+                <!--<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>-->
+                <!--<li><a href="#">Link</a></li>-->
+                <!--<li class="dropdown">-->
+                    <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>-->
+                    <!--<ul class="dropdown-menu">-->
+                        <!--<li><a href="#">Action</a></li>-->
+                        <!--<li><a href="#">Another action</a></li>-->
+                        <!--<li><a href="#">Something else here</a></li>-->
+                        <!--<li role="separator" class="divider"></li>-->
+                        <!--<li><a href="#">Separated link</a></li>-->
+                        <!--<li role="separator" class="divider"></li>-->
+                        <!--<li><a href="#">One more separated link</a></li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+            <!--</ul>-->
+            <!--<form class="navbar-form navbar-left" role="search">-->
+                <!--<div class="form-group">-->
+                    <!--<input type="text" class="form-control" placeholder="Search">-->
+                <!--</div>-->
+                <!--<button type="submit" class="btn btn-default">Submit</button>-->
+            <!--</form>-->
+            <!--<ul class="nav navbar-nav navbar-right">-->
+                <!--<li><a href="#">Link</a></li>-->
+                <!--<li class="dropdown">-->
+                    <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>-->
+                    <!--<ul class="dropdown-menu">-->
+                        <!--<li><a href="#">Action</a></li>-->
+                        <!--<li><a href="#">Another action</a></li>-->
+                        <!--<li><a href="#">Something else here</a></li>-->
+                        <!--<li role="separator" class="divider"></li>-->
+                        <!--<li><a href="#">Separated link</a></li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</div>&lt;!&ndash; /.navbar-collapse &ndash;&gt;-->
+    <!--</div>&lt;!&ndash; /.container-fluid &ndash;&gt;-->
+<!--</nav>-->
+
+<!--<div class="navbar navbar-inverse navbar-fixed-top" ng-controller="HeaderController">-->
+    <!--<div class="container">-->
+        <!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">-->
+            <!--<span class="icon-bar"></span>-->
+            <!--<span class="icon-bar"></span>-->
+            <!--<span class="icon-bar"></span>-->
+        <!--</button>-->
+        <!--<a class="navbar-brand" href="#">Project name</a>-->
+        <!--<div class="nav-collapse collapse">-->
+            <!--<ul class="nav navbar-nav">-->
+                <!--<li class="active"><a href="#">Home</a></li>-->
+                <!--<li><a href="#about">About</a></li>-->
+                <!--<li><a href="#contact">Contact</a></li>-->
+                <!--<li class="dropdown">-->
+                    <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>-->
+                    <!--<ul class="dropdown-menu">-->
+                        <!--<li><a href="#">Action</a></li>-->
+                        <!--<li><a href="#">Another action</a></li>-->
+                        <!--<li><a href="#">Something else here</a></li>-->
+                        <!--<li class="divider"></li>-->
+                        <!--<li class="nav-header">Nav header</li>-->
+                        <!--<li><a href="#">Separated link</a></li>-->
+                        <!--<li><a href="#">One more separated link</a></li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+            <!--</ul>-->
+            <!--<ul class="nav navbar-nav pull-right">-->
+                <!--<li class="active"><a href="/examples/navbar/">Default</a></li>-->
+                <!--<li><a href="/examples/navbar-static-top/">Static top</a></li>-->
+                <!--<li><a href="/examples/navbar-fixed-top/">Fixed top</a></li>-->
+            <!--</ul>-->
+        <!--</div>&lt;!&ndash;/.nav-collapse &ndash;&gt;-->
+    <!--</div>-->
+<!--</div>-->
