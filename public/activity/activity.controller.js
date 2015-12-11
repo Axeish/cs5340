@@ -17,7 +17,7 @@
 
         function submitComment(){
             console.log($scope.model.commentM)
-            if ($rootScope.currentUser && $scope.currentEvent){
+            if ($rootScope.currentUser && $scope.currentEvent && $scope.model.commentM){
                 EventService.addCommentToEvent(
                     $scope.model.commentM,
                     $scope.currentEvent,
