@@ -15,7 +15,7 @@
     </div>
 
     <table class="table table-striped table-bordered" style="width: 100%">
-        <thead>
+        <thead style="width: 100%">
             <tr>
                 <th>Time</th>
                 <th>Event</th>
@@ -23,7 +23,7 @@
             </tr>
         </thead>
 
-        <tbody>
+        <tbody style="width: 100%">
             <tr ng-repeat-start="event in events | filter:q as results">
                 <td class="eventTime">
                     {{event.time}}
@@ -46,11 +46,14 @@
 
                     <hr>
 
+                    <h5>Commute Info</h5>
+
                     <div>
                         <img src="../images/location.png" alt="image" style="width: 100%"/>
                     </div>
 
                     <hr>
+                    <h5>Weather</h5>
 
                     <div>
                         <img src="../images/weather.png" alt="image" style="width: 100%"/>
