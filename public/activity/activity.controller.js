@@ -29,7 +29,7 @@
             $scope.goingEvents = [];
 
             for (var index in curUser.goingEvents){
-                EventService.findEventById(
+                EventService.findGoingEventById(
                     curUser.goingEvents[index],
                     function(event){
                         $scope.goingEvents.push(event)
