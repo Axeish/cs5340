@@ -317,3 +317,8 @@ float :right;
 .btn{
     white-space: normal;
 }
+
+.table td {
+    white-space: normal;
+    word-wrap:break-word;
+}
