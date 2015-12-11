@@ -24,7 +24,7 @@
             </tr>
         </thead>
 
-        <tbody ng-repeat="event in events">
+        <tbody ng-repeat="event in events | filter:q as results">
             <tr>
                 <td class="eventTime" style="width: 15%">
                     {{event.time}}
@@ -74,9 +74,9 @@
                 </td>
                 <td style="width: 15%"></td>
             </tr>
-            <!--<p ng-if="results.length == 0">-->
-                <!--<strong>No results found...</strong>-->
-            <!--</p>-->
+            <p ng-if="results.length == 0">
+                <strong>No results found...</strong>
+            </p>
         </tbody>
     </table>
 
