@@ -23,13 +23,13 @@
             </tr>
         </thead>
 
-        <tbody ng-repeat="event in events | filter:q as results">
-            <tr class="accordion-heading">
+        <tbody>
+            <tr ng-repeat-start="event in events | filter:q as results">
                 <td class="eventTime">
                     {{event.time}}
                 </td>
                 <td>
-                    <a class="accordion-toggle" data-toggle="collapse" data-target="{{event.id}}" data-parent="#accordion" aria-expanded="false" aria-controls="{{event._id}}">
+                    <a data-toggle="collapse" data-target="{{event.id}}" data-parent="#accordion" aria-expanded="false" aria-controls="{{event._id}}">
                         {{event.name}}
                     </a>
                 </td>
@@ -37,7 +37,7 @@
                     {{event.date}}
                 </td>
             </tr>
-            <tr class="accordion-body collapse" id="{{event._id}}">
+            <tr class="collapse" id="{{event._id}}">
                 <td></td>
                 <td>
                     <div>
@@ -46,10 +46,10 @@
                 </td>
                 <td></td>
             </tr>
+            <p ng-if="results.length == 0">
+                <strong>No results found...</strong>
+            </p>
         </tbody>
-        <p ng-if="results.length == 0">
-            <strong>No results found...</strong>
-        </p>
     </table>
 
     <!-- Modal -->
