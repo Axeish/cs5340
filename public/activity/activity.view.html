@@ -1,89 +1,92 @@
-<script src="../js/bootstrap-rating-input.min.js"></script>
+<!--<script src="../js/bootstrap-rating-input.min.js"></script>-->
 
 <div class="col-xs-10 col-xs-offset-1 col-md-10 col-md-offset-1 main" ng-controller="ActivityLogController">
     <h1 class="page-header">Events</h1>
 
-    <h2>Events I've attended</h2>
+    <h3>Events I've attended</h3>
 
 
     <table class="table table-striped table-bordered" id="accordion">
         <thead>
         <tr>
-            <th>Time</th>
-            <th>Event</th>
-            <th>Date</th>
+            <th style="width: 15%">Time</th>
+            <th style="width: 70%">Event</th>
+            <th style="width: 15%">Date</th>
         </tr>
         </thead>
 
         <tbody ng-repeat="event in attendedEvents" class="accordion-group">
         <tr class="accordion-heading">
-            <td class="eventTime">
+            <td class="eventTime" style="width: 15%">
                 {{event.beginTime}}
             </td>
-            <td>
+            <td style="width: 70%">
                 <a class="accordion-toggle" data-toggle="collapse" data-target="{{event.id}}" data-parent="#accordion" aria-expanded="false" aria-controls="{{event._id}}">
                     {{event.title}}
                 </a>
             </td>
-            <td >
+            <td style="width: 15%">
                 {{event.date}}
             </td>
         </tr>
         <tr class="accordion-body collapse" id="{{event._id}}">
-            <td></td>
-            <td>
+            <td style="width: 15%"></td>
+            <td style="width: 70%">
                 <div>
                     {{event.description}}
                 </div>
             </td>
-            <td>
-                <div class="pull-right">
-                    <row>Rating:</row>
-                    <input type="number" name="your_awesome_parameter" id="some" class="rating" data-clearable="remove"/>
-                </div>
+            <td style="width: 15%">
+                <!--<div class="pull-right">-->
+                    <!--<row>Rating:</row>-->
+                    <!--<input type="number" name="your_awesome_parameter" id="some" class="rating" data-clearable="remove"/>-->
+                <!--</div>-->
             </td>
         </tr>
         </tbody>
     </table>
 
-    <h2>Events I'm going</h2>
+    <h3>Events I'm going</h3>
 
     <table class="table table-striped table-bordered" id="accordion1">
         <thead>
         <tr>
-            <th>Time</th>
-            <th>Event</th>
-            <th>Date</th>
+            <th style="width: 15%">Time</th>
+            <th style="width: 70%">Event</th>
+            <th style="width: 15%">Date</th>
         </tr>
         </thead>
         <tbody ng-repeat="event in goingEvents" class="accordion-group">
             <tr class="accordion-heading">
-                <td class="eventTime">
+                <td class="eventTime" style="width: 15%">
                     {{event.beginTime}}
                 </td>
-                <td>
+                <td style="width: 70%">
                     <a class="accordion-toggle" data-toggle="collapse" data-target="{{event._id}}" data-parent="#accordion1" aria-expanded="false" aria-controls="{{event.id}}">
                         {{event.title}}
                     </a>
                 </td>
-                <td >
+                <td style="width: 15%">
                     {{event.date}}
                 </td>
             </tr>
             <tr class="accordion-body collapse" id="{{event.id}}">
-                <td></td>
-                <td>
+                <td style="width: 15%"></td>
+                <td style="width: 70%">
                     <div>
                         {{event.description}}
                     </div>
                 </td>
-                <td>
+                <td style="width: 15%">
                     <div class="pull-right">
                         <row>Rating:</row>
+                        <script src="../js/bootstrap-rating-input.min.js"></script>
                         <input type="number" name="your_awesome_parameter" class="rating" data-clearable="remove"/>
                     </div>
                 </td>
             </tr>
         </tbody>
     </table>
+
+    <!--<input type="number" name="your_awesome_parameter" class="rating" data-clearable="remove"/>-->
 </div>
