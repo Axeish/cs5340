@@ -9,9 +9,25 @@
         $scope.updateEvent = updateEvent;
         $scope.selectEvent = selectEvent;
         $scope.deleteEvent = deleteEvent;
+        $scope.submitComment = submitComment;
+        $scope.model = {};
 
         var currentUserId = $rootScope.currentUser.id;
         var curUser = $rootScope.currentUser;
+
+        function submitComment(){
+            console.log($scope.model.commentM)
+            if ($rootScope.currentUser && $scope.currentEvent){
+                EventService.addCommentToEvent(
+                    $scope.model.commentM,
+                    $scope.currentEvent,
+                    $rootScope.currentUser,
+                    function(){
+                        findAttendedEventsForUser();
+                    }
+                )
+            }
+        }
 
         function findAttendedEventsForUser(){
             $scope.attendedEvents = [];
@@ -69,8 +85,9 @@
         }
 
         function selectEvent(index){
-            $scope.currentEvent = $scope.events[index];
-            $scope.eventName = $scope.currentEvent.name;
+            console.log(index, typeof(index))
+            $scope.currentEvent = $scope.attendedEvents[index];
+            //$scope.eventName = $scope.currentEvent.name;
         }
 
         function updateEvent(){

@@ -21,7 +21,7 @@
                     {{event.beginTime}}
                 </td>
                 <td style="width: 70%">
-                    <a class="accordion-toggle" data-toggle="collapse" data-target="{{event.id}}" aria-expanded="false" aria-controls="{{event._id}}">
+                    <a class="accordion-toggle" data-toggle="collapse" data-target="{{event.id}}" aria-expanded="false" aria-controls="{{event._id}}" ng-click="selectEvent($index)">
                         {{event.title}}
                     </a>
                 </td>
@@ -32,9 +32,25 @@
         <tr class="accordion-body collapse" id="{{event._id}}">
             <td style="width: 15%"></td>
             <td style="width: 70%">
+                <h4>Description</h4>
+                <hr>
                 <div>
                     {{event.description}}
                 </div>
+                <hr>
+                <h4>Comments</h4>
+
+                <ul class="list-unstyled">
+                    <li ng-repeat="comment in event.comment">
+                        <blockquote-reverse style="border-right: 5px solid #bddc6f"><i class="glyphicon glyphicon-user" style="padding: 5px"></i></blockquote-reverse>  {{comment.userId}} :  {{comment.message}}
+                        <hr>
+                    </li>
+                </ul>
+                <form class="form-inline">
+                    <textarea style="width: 100%" rows="3" class="form-control" placeholder="Please input your comment here..." ng-model="model.commentM">
+                    </textarea>
+                    <button type="submit" class="btn btn-default pull-right" ng-click="submitComment()">Submit</button>
+                </form>
             </td>
             <td style="width: 15%">
             </td>
