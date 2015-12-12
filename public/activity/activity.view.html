@@ -42,7 +42,11 @@
 
                 <ul class="list-unstyled">
                     <li ng-repeat-start="comment in event.comment" style="width: 100%">
-                        <blockquote-reverse style="border-right: 5px solid #bddc6f"><i class="glyphicon glyphicon-user" style="padding: 5px"></i></blockquote-reverse>  {{comment.userId}} :  {{comment.message}}
+                        <blockquote-reverse style="border-right: 5px solid #bddc6f"><i class="glyphicon glyphicon-user" style="padding: 5px"></i></blockquote-reverse>  {{comment.userId}} :
+                    </li>
+                    <li>&nbsp;</li>
+                    <li style="width: 100%">
+                        {{comment.message}}
                     </li>
                     <li ng-repeat-end>
                         <input type="number" value="3.5" min=0 max=5 step=0.5 data-size="xs" data-show-clear="false" data-readonly="true" my-start style="width: 100%"/>
