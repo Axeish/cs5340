@@ -114,8 +114,8 @@
       <file leaf-file-name="activity.view.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/activity/activity.view.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5514706">
-              <caret line="51" column="35" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.5790441">
+              <caret line="57" column="17" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
               <folding>
                 <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#!!top" expanded="true" />
@@ -130,6 +130,7 @@
                 <element signature="n#style#0;n#i#0;n#blockquote-reverse#0;n#li#0;n#ul#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#li#1;n#ul#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#textarea#0;n#form#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#form#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#td#2;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h3#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#1;n#div#0;n#!!top" expanded="true" />
@@ -1066,8 +1067,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/activity/activity.view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5514706">
-          <caret line="51" column="35" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.5790441">
+          <caret line="57" column="17" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
           <folding>
             <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#!!top" expanded="true" />
@@ -1082,6 +1083,7 @@
             <element signature="n#style#0;n#i#0;n#blockquote-reverse#0;n#li#0;n#ul#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#li#1;n#ul#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#textarea#0;n#form#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#form#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#2;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h3#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#1;n#div#0;n#!!top" expanded="true" />
