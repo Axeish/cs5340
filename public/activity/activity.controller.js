@@ -1,7 +1,13 @@
 (function(){
     angular
         .module("FormBuilderApp")
-        .controller("ActivityLogController", ActivityLogController);
+        .controller("ActivityLogController", ActivityLogController)
+        .directive('myStart', function ()
+        {
+            return function (scope, element, attrs) {
+                $(element).rating();
+            };
+        });
 
     function ActivityLogController($scope, $rootScope, $location, EventService){
         $scope.$location = $location;
@@ -16,10 +22,10 @@
         var curUser = $rootScope.currentUser;
 
         function submitComment(){
-            console.log($scope.model.commentM)
             if ($rootScope.currentUser && $scope.currentEvent && $scope.model.commentM){
                 EventService.addCommentToEvent(
                     $scope.model.commentM,
+                    $scope.model.rating,
                     $scope.currentEvent,
                     $rootScope.currentUser,
                     function(){
@@ -85,7 +91,6 @@
         }
 
         function selectEvent(index){
-            console.log(index, typeof(index))
             $scope.currentEvent = $scope.attendedEvents[index];
             //$scope.eventName = $scope.currentEvent.name;
         }
